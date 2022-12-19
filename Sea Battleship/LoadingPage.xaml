@@ -1,0 +1,56 @@
+﻿<Page x:Class="Sea_Battleship.LoadingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sea_Battleship"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="LoadingPage" Width="900" Height="520" MinWidth="640" MinHeight="480">
+    <Grid Margin="-140,0,-97,0" Background="#FFF0F0F0">
+        <Grid Height="62" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="30 px"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Menu Grid.Column="0" VerticalContentAlignment="Stretch"  ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" Background="{x:Null}" Margin="721,6,0,-6" Grid.ColumnSpan="2" Width="164">
+                <MenuItem FlowDirection="RightToLeft" Margin="0" RenderTransformOrigin="0.5,0.5" Width="156" Height="36" Background="{x:Null}" BorderBrush="{x:Null}"  >
+                    <MenuItem.Icon>
+                        <Image Source="Resources/menuBackground.png" Margin="-1,-13,-17,-5"/>
+                    </MenuItem.Icon>
+                    <MenuItem  Header="Правила" x:Name="RuleItem" Click="RuleItem_Click" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Center" Width="164" Margin="0" Background="{x:Null}" VerticalAlignment="Center" />
+                    <MenuItem Header="О системе" x:Name="AboutItem" Click="AboutItem_Click" HorizontalAlignment="Right" Width="164" Margin="-1,0,0,0" />
+
+                </MenuItem>
+
+            </Menu>
+
+
+            <Image Name="AudioImg" Source="Resources/audio.png" AutomationProperties.Name="AudioButton" MouseDown="audioChanged" VerticalAlignment="Center" Margin="10,0,780,0" Height="57" Width="57"/>
+            <Label Content="Сохраненные игры" HorizontalAlignment="Left" Margin="341,-5,0,0" VerticalAlignment="Top" FontSize="24"/>
+        </Grid>
+        <Grid Name="LoadGrid" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" MinWidth="360" MinHeight="250" Width="880" Height="338" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="91*"></ColumnDefinition>
+                <ColumnDefinition Width="789*"/>
+                <ColumnDefinition Width="0*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <SolidColorBrush Color="White" Opacity="0.7"/>
+            </Grid.Background>
+            <Label Content="Выбрать сохранение"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Background="#B25B9EE0" Opacity="0.805"/>
+        </Grid>
+        <Button Content="Назад" Click="BackClick_Click" HorizontalAlignment="Center" Margin="0,423,0,0" VerticalAlignment="Top" Width="97" Height="26" FontSize="16" Background="#B26BB0F3" BorderBrush="#FFADD3E4"/>
+    </Grid>
+</Page>
